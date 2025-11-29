@@ -1,4 +1,4 @@
-package it.lmarconi.receipt_manager;
+package it.lmarconi.receiptmanager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
