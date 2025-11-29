@@ -1,5 +1,6 @@
 package it.lmarconi.receiptmanager.employee;
 
+import it.lmarconi.receiptmanager.receipt.Receipt;
 import it.lmarconi.receiptmanager.role.Role;
 import it.lmarconi.receiptmanager.store.Store;
 import jakarta.persistence.*;
@@ -8,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "rm_employee")
@@ -37,5 +39,8 @@ public class Employee {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "store_id")
     private Store store;
+
+    @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Receipt> receipts;
 
 }
