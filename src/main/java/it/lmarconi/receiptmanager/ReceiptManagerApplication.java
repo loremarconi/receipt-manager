@@ -1,4 +1,4 @@
-package it.lmarconi.receipt_manager;
+package it.lmarconi.receiptmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
