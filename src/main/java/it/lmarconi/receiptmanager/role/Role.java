@@ -1,12 +1,12 @@
 package it.lmarconi.receiptmanager.role;
 
-import it.lmarconi.receiptmanager.employee.Employee;
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.List;
 
 @Entity
 @Table(name = "rm_role")
@@ -21,8 +21,5 @@ public class Role {
 
     @Column(name = "description")
     private String description;
-
-    @OneToMany(mappedBy = "role", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Employee> employees;
 
 }
